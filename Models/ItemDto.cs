@@ -1,4 +1,7 @@
-﻿namespace TodoListQL.Models
+﻿using HotChocolate.Data.Projections.Context;
+using HotChocolate.Execution.Processing;
+
+namespace TodoListQL.Models
 {
     public class ItemDto
     {
@@ -7,6 +10,7 @@
         public string Description{ get; set; }
         public bool IsDone{ get; set; }
         public int ListId{ get; set; }
-        public virtual ItemListDto? ItemList { get; set; }  = new ItemListDto();
+
+        public virtual ItemListDto? ItemList { get; set; } // = new ItemListDto();
     }
 }

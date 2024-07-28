@@ -30,7 +30,7 @@ namespace TodoListQL.GraphQL
                 Description = input.description,
                 IsDone = input.isDone,
                 ListId = input.listid,
-                ItemList = null
+//                ItemList = null
             };
 
             try {

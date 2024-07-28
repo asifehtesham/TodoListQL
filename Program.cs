@@ -17,7 +17,6 @@ builder.Services.AddPooledDbContextFactory<ApiDbContext>(optionsBuilder =>
 builder.Services.AddGraphQLServer()
     .AddQueryType<Query>()
     .AddType<ItemListType>()
-    .AddType<ItemType>()    
     .AddMutationType<Mutation>()
     .AddProjections()
     .AddFiltering()
@@ -34,6 +33,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapGraphQL();
 });
+
 app.UseGraphQLVoyager("/graphql-ui", new VoyagerOptions()
 {
     GraphQLEndPoint = "/graphql"
